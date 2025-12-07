@@ -1,0 +1,273 @@
+{
+  "pool_name": "MultiCoin Merged Mining Pool - All Chains",
+  "block_signature": "/MultiMerge-AllCoins/",
+  "merged_blockchain_order": [
+    "litecoin",
+    "dogecoin",
+    "bellscoin",
+    "pepecoin",
+    "luckycoin",
+    "junkcoin",
+    "dingocoin",
+    "dogmcoin"
+  ],
+  "blockchains": {
+    "litecoin": [{
+      "name": "litecoin-primary",
+      "rpc_url": "http://127.0.0.1:9332",
+      "rpc_username": "litecoinrpc",
+      "rpc_password": "changeme",
+      "timeout": "30s",
+      "block_notify_url": "http://127.0.0.1:8001/notify/litecoin",
+      "reward_to": "LTC_ADDRESS_HERE"
+    }],
+    "dogecoin": [{
+      "name": "dogecoin-aux",
+      "rpc_url": "http://127.0.0.1:22555",
+      "rpc_username": "dogecoinrpc",
+      "rpc_password": "changeme",
+      "timeout": "30s",
+      "block_notify_url": "http://127.0.0.1:8001/notify/dogecoin",
+      "reward_to": "DOGE_ADDRESS_HERE"
+    }],
+    "bellscoin": [{
+      "name": "bellscoin-aux",
+      "rpc_url": "http://127.0.0.1:19918",
+      "rpc_username": "bellscoinrpc",
+      "rpc_password": "changeme",
+      "timeout": "30s",
+      "block_notify_url": "http://127.0.0.1:8001/notify/bellscoin",
+      "reward_to": "BELLS_ADDRESS_HERE"
+    }],
+    "pepecoin": [{
+      "name": "pepecoin-aux",
+      "rpc_url": "http://127.0.0.1:29377",
+      "rpc_username": "pepecoinrpc",
+      "rpc_password": "changeme",
+      "timeout": "30s",
+      "block_notify_url": "http://127.0.0.1:8001/notify/pepecoin",
+      "reward_to": "PEPE_ADDRESS_HERE"
+    }],
+    "luckycoin": [{
+      "name": "luckycoin-aux",
+      "rpc_url": "http://127.0.0.1:9902",
+      "rpc_username": "luckycoinrpc",
+      "rpc_password": "changeme",
+      "timeout": "30s",
+      "block_notify_url": "http://127.0.0.1:8001/notify/luckycoin",
+      "reward_to": "LKY_ADDRESS_HERE"
+    }],
+    "junkcoin": [{
+      "name": "junkcoin-aux",
+      "rpc_url": "http://127.0.0.1:9771",
+      "rpc_username": "junkcoinrpc",
+      "rpc_password": "changeme",
+      "timeout": "30s",
+      "block_notify_url": "http://127.0.0.1:8001/notify/junkcoin",
+      "reward_to": "JKC_ADDRESS_HERE"
+    }],
+    "dingocoin": [{
+      "name": "dingocoin-aux",
+      "rpc_url": "http://127.0.0.1:14266",
+      "rpc_username": "dingocoinrpc",
+      "rpc_password": "changeme",
+      "timeout": "30s",
+      "block_notify_url": "http://127.0.0.1:8001/notify/dingocoin",
+      "reward_to": "DINGO_ADDRESS_HERE"
+    }],
+    "dogmcoin": [{
+      "name": "dogmcoin-aux",
+      "rpc_url": "http://127.0.0.1:7877",
+      "rpc_username": "dogmcoinrpc",
+      "rpc_password": "changeme",
+      "timeout": "30s",
+      "block_notify_url": "http://127.0.0.1:8001/notify/dogmcoin",
+      "reward_to": "DOGM_ADDRESS_HERE"
+    }]
+  },
+  "port": "3333",
+  "max_connections": 8192,
+  "connection_timeout": "600s",
+  "pool_difficulty": 1024,
+  "share_flush_interval": "30s",
+  "hashrate_window": "5m",
+  "pool_stats_interval": "60s",
+  "app_stats_interval": "30s",
+  "persistence": {
+    "host": "localhost",
+    "port": 5432,
+    "user": "pooluser",
+    "password": "poolpass",
+    "database": "miningpool",
+    "sslmode": "disable"
+  },
+  "api": {
+    "port": "8001"
+  },
+  "payouts": {
+    "interval": "2h",
+    "scheme": "PPLNS",
+    "chains": {
+      "litecoin": {
+        "reward_from": "LTC_ADDRESS_HERE",
+        "miner_min_payment": 0.1,
+        "pool_rewards": [
+          {"address": "LTC_FEE_ADDRESS", "percentage": 1.0}
+        ]
+      },
+      "dogecoin": {
+        "reward_from": "DOGE_ADDRESS_HERE",
+        "miner_min_payment": 10.0,
+        "pool_rewards": [
+          {"address": "DOGE_FEE_ADDRESS", "percentage": 1.0}
+        ]
+      },
+      "bellscoin": {
+        "reward_from": "BELLS_ADDRESS_HERE",
+        "miner_min_payment": 5.0,
+        "pool_rewards": [
+          {"address": "BELLS_FEE_ADDRESS", "percentage": 1.0}
+        ]
+      },
+      "pepecoin": {
+        "reward_from": "PEPE_ADDRESS_HERE",
+        "miner_min_payment": 100.0,
+        "pool_rewards": [
+          {"address": "PEPE_FEE_ADDRESS", "percentage": 1.0}
+        ]
+      },
+      "luckycoin": {
+        "reward_from": "LKY_ADDRESS_HERE",
+        "miner_min_payment": 1.0,
+        "pool_rewards": [
+          {"address": "LKY_FEE_ADDRESS", "percentage": 1.0}
+        ]
+      },
+      "junkcoin": {
+        "reward_from": "JKC_ADDRESS_HERE",
+        "miner_min_payment": 5.0,
+        "pool_rewards": [
+          {"address": "JKC_FEE_ADDRESS", "percentage": 1.0}
+        ]
+      },
+      "dingocoin": {
+        "reward_from": "DINGO_ADDRESS_HERE",
+        "miner_min_payment": 10.0,
+        "pool_rewards": [
+          {"address": "DINGO_FEE_ADDRESS", "percentage": 1.0}
+        ]
+      },
+      "dogmcoin": {
+        "reward_from": "DOGM_ADDRESS_HERE",
+        "miner_min_payment": 10.0,
+        "pool_rewards": [
+          {"address": "DOGM_FEE_ADDRESS", "percentage": 1.0}
+        ]
+      }
+    }
+  },
+  "ports": {
+    "3333": {
+      "enabled": true,
+      "description": "Standard PPLNS - Auto VarDiff",
+      "difficulty": 1024,
+      "varDiff": {
+        "enabled": true,
+        "minDiff": 256,
+        "maxDiff": 16384,
+        "targetTime": 15,
+        "retargetTime": 90,
+        "variancePercent": 30
+      },
+      "payoutScheme": "PPLNS"
+    },
+    "3334": {
+      "enabled": true,
+      "description": "Low Difficulty PPLNS - Small Miners",
+      "difficulty": 128,
+      "varDiff": {
+        "enabled": true,
+        "minDiff": 32,
+        "maxDiff": 2048,
+        "targetTime": 15,
+        "retargetTime": 90,
+        "variancePercent": 30
+      },
+      "payoutScheme": "PPLNS"
+    },
+    "3335": {
+      "enabled": true,
+      "description": "Medium Difficulty PPLNS",
+      "difficulty": 2048,
+      "varDiff": {
+        "enabled": true,
+        "minDiff": 512,
+        "maxDiff": 8192,
+        "targetTime": 15,
+        "retargetTime": 90,
+        "variancePercent": 30
+      },
+      "payoutScheme": "PPLNS"
+    },
+    "3336": {
+      "enabled": true,
+      "description": "High Difficulty PPLNS - ASIC Miners",
+      "difficulty": 8192,
+      "varDiff": {
+        "enabled": true,
+        "minDiff": 4096,
+        "maxDiff": 65536,
+        "targetTime": 15,
+        "retargetTime": 90,
+        "variancePercent": 30
+      },
+      "payoutScheme": "PPLNS"
+    },
+    "3337": {
+      "enabled": true,
+      "description": "Fixed Difficulty 512 - PPLNS",
+      "difficulty": 512,
+      "varDiff": {
+        "enabled": false
+      },
+      "payoutScheme": "PPLNS"
+    },
+    "3340": {
+      "enabled": true,
+      "description": "Solo Mining - Standard Difficulty",
+      "difficulty": 1024,
+      "varDiff": {
+        "enabled": true,
+        "minDiff": 256,
+        "maxDiff": 16384,
+        "targetTime": 15,
+        "retargetTime": 90,
+        "variancePercent": 30
+      },
+      "payoutScheme": "SOLO"
+    },
+    "3341": {
+      "enabled": true,
+      "description": "Solo Mining - High Hashrate",
+      "difficulty": 8192,
+      "varDiff": {
+        "enabled": true,
+        "minDiff": 4096,
+        "maxDiff": 131072,
+        "targetTime": 15,
+        "retargetTime": 90,
+        "variancePercent": 30
+      },
+      "payoutScheme": "SOLO"
+    },
+    "3342": {
+      "enabled": true,
+      "description": "Solo Mining - Fixed Difficulty",
+      "difficulty": 2048,
+      "varDiff": {
+        "enabled": false
+      },
+      "payoutScheme": "SOLO"
+    }
+  }
+}
